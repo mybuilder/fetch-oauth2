@@ -1,4 +1,4 @@
-export default {
+module.exports = {
     fetchWithMiddleware: require('./lib/fetchWithMiddleware.js'),
     middleware: require('./lib/middleware.js'),
     tokenStorage: require('./lib/tokenStorage.js')
