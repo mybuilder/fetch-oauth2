@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+set -e
+
+port=3950
+
+# Find next available port
+while lsof -i :$((++port)) >/dev/null; do true; done
+
+echo "{\"port\": $port}" > "$PWD/test_server_port.json"
+
+# Spin a test server in the background
+node ./script/server $port &>/dev/null &
+server_pid=$!
+
+trap "kill $server_pid" INT EXIT
+
+if [ "$1" = "--watch" ]; then
+    ./node_modules/karma/bin/karma start --browsers PhantomJS_custom --reporters dots --auto-watch --no-single-run
+else
+    ./node_modules/karma/bin/karma start --browsers PhantomJS_custom
+fi

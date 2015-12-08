@@ -1,0 +1,48 @@
+{
+  "name": "fetch-oauth2",
+  "version": "0.1.0",
+  "description": "OAuth2 authorization library for fetch requests",
+  "repository": "https://github.com/mybuilder/fetch-oauth2",
+  "main": "index.js",
+  "scripts": {
+    "start": "echo '{\"port\": 3901}' > \"$PWD/test_server_port.json\" && node ./script/server 3901",
+    "test": "./script/test",
+    "build": "babel src --out-dir lib",
+    "preversion": "npm test",
+    "version": "npm run build",
+    "postversion": "git push && git push --tags",
+    "publish-patch": "npm version patch && npm publish"
+  },
+  "keywords": [
+    "oauth",
+    "oauth2",
+    "fetch",
+    "fetchjs",
+    "request",
+    "http",
+    "auth",
+    "authorization"
+  ],
+  "author": "Sten",
+  "license": "MIT",
+  "devDependencies": {
+    "babel": "^5.8.29",
+    "babel-core": "^5.8.33",
+    "babel-loader": "^5.3.3",
+    "babel-runtime": "^5.8.29",
+    "expect.js": "^0.3.1",
+    "exports-loader": "^0.6.2",
+    "imports-loader": "^0.6.5",
+    "json-loader": "^0.5.3",
+    "karma": "^0.13.15",
+    "karma-mocha": "^0.2.0",
+    "karma-phantomjs-launcher": "^0.2.1",
+    "karma-spec-reporter": "0.0.22",
+    "karma-webpack": "^1.7.0",
+    "mocha": "^2.3.3",
+    "phantomjs": "^1.9.18",
+    "wallaby-webpack": "0.0.10",
+    "webpack": "^1.12.3",
+    "whatwg-fetch": "^0.10.1"
+  }
+}
