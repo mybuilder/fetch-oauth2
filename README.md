@@ -5,6 +5,11 @@ Based on a fetch.js, and allows creating a authenticated request to an api with 
 
 [![Build Status](https://travis-ci.org/mybuilder/fetch-oauth2.svg?branch=master)](https://travis-ci.org/mybuilder/fetch-oauth2)
 
+## Install from npm
+```
+npm install network-status --save
+```
+
 ### Token storage
 
 Storage takes 3 functions, and all of them are optional and must return a `Promise`, but you should pass in at least one of them it depends on the application.
@@ -19,8 +24,6 @@ const storage = tokenStorage({initialToken, fetchToken, generateToken});
 * `generateToken` is an equivalent to a http `POST`, and should generate a new token
 
 ### Request
-
-
 
 ```javascript
 import {fetchWithMiddleware, middleware} from 'fetch-oauth2';
