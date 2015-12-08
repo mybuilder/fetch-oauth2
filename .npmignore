@@ -1,3 +1,7 @@
 src
-test
+spec
+script
 .travis.yml
+karma.conf.js
+test_server_port.json
+wallaby.js
