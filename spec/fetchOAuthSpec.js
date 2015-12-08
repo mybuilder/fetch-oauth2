@@ -1,9 +1,9 @@
 /*global describe, it, Promise */
 
 import expect from 'expect.js';
-import fetchWithMiddleware from '../src/fetchWithMiddleware';
-import { setOAuth2Authorization, authorisationChallengeHandler } from '../src/middleware';
-import tokenStorage from '../src/tokenStorage';
+import fetchWithMiddleware from '../src/fetchWithMiddleware.js';
+import { setOAuth2Authorization, authorisationChallengeHandler } from '../src/middleware.js';
+import tokenStorage from '../src/tokenStorage.js';
 
 let server = require('../test_server_port.json');
 

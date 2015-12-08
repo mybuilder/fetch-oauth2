@@ -1,8 +1,8 @@
 /*global Promise */
 
-import applyMiddleware from './utils/applyMiddleware';
-import Config from './utils/config';
-import fetchWithConfig from './utils/fetchWithConfig';
+import applyMiddleware from './utils/applyMiddleware.js';
+import Config from './utils/config.js';
+import fetchWithConfig from './utils/fetchWithConfig.js';
 
 export default function fetchWithMiddleware(...middlewares) {
     return (uri, opts) => {

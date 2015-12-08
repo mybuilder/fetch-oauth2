@@ -1,6 +1,6 @@
 /*global Promise */
 
-import preventRaceCondition from './utils/preventRaceCondition';
+import preventRaceCondition from './utils/preventRaceCondition.js';
 
 export default function tokenStorage({initialToken, fetchToken, generateToken}) {
     let _token = initialToken;

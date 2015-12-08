@@ -1,6 +1,6 @@
 /*global Promise */
 
-import fetchWithConfig from './utils/fetchWithConfig';
+import fetchWithConfig from './utils/fetchWithConfig.js';
 
 export function setOAuth2Authorization({getToken}) {
     return next => config => {
