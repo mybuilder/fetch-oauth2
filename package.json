@@ -1,6 +1,6 @@
 {
   "name": "fetch-oauth2",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "OAuth2 authorization library for fetch requests",
   "repository": "https://github.com/mybuilder/fetch-oauth2",
   "main": "index.js",
