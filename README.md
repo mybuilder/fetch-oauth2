@@ -7,7 +7,7 @@ Based on a fetch.js, and allows creating a authenticated request to an api with 
 
 ## Install from npm
 ```
-npm install network-status --save
+npm install fetch-oauth2 --save
 ```
 
 ### Token storage
