@@ -3,6 +3,8 @@ Fetch JS wrapper to allow OAuth2 authenticated requests
 
 Based on a fetch.js, and allows creating a authenticated request to an api with oauth2 `access_token`. In addition to handling OAuth2 tokens it prevents race conditions between request when token needs to be generated or fetched.
 
+[![Build Status](https://travis-ci.org/mybuilder/fetch-oauth2.svg?branch=master)](https://travis-ci.org/mybuilder/fetch-oauth2)
+
 ### Token storage
 
 Storage takes 3 functions, and all of them are optional and must return a `Promise`, but you should pass in at least one of them it depends on the application.
