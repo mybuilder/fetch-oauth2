@@ -1,25 +1,23 @@
 export default class Config {
-    _config;
+    uri;
+    opts;
 
-    constructor(config) {
-        this._config = config;
+    constructor({uri = '', opts = {}} = {}) {
+        this.uri = uri;
+        this.opts = opts;
+    }
+
+    setHeader(name, value) {
+        const {headers, ...opts} = this.opts;
+
+        return new Config({uri: this.uri, opts: {...opts, headers: {...headers, [name]: value}}});
     }
 
     setAccessToken({token_type, access_token}) {
-        const config = this._config;
-
-        return new Config({...config, opts: {...config.opts, headers: {...config.opts.headers, 'Authorization': token_type + ' ' + access_token}}});
+        return this.setHeader('Authorization', token_type + ' ' + access_token);
     }
 
     updateUri(fn) {
-        return new Config({...this._config, uri: fn(this._config.uri)});
-    }
-
-    get uri() {
-        return this._config.uri;
-    }
-
-    get opts() {
-        return this._config.opts;
+        return new Config({opts: this.opts, uri: fn(this.uri)});
     }
 }
