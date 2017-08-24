@@ -30,7 +30,7 @@ import {fetchWithMiddleware, middleware} from 'fetch-oauth2';
 
 const oauth2Fetch = fetchWithMiddleware(middleware.authorisationChallengeHandler(storage), middleware.setOAuth2Authorization(storage));
 
-oauthFetch('http://httpbin.org/get')
+oauth2Fetch('http://httpbin.org/get')
     .then(response => /**/)
     .catch(error => /**/)
 ```
