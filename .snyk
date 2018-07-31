@@ -1,0 +1,36 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.12.0
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:debug:20170905':
+    - karma > socket.io > socket.io-adapter > socket.io-parser > debug:
+        patched: '2018-07-31T00:36:13.091Z'
+  'npm:hoek:20180212':
+    - phantomjs > request > hawk > boom > hoek:
+        patched: '2018-07-31T00:36:13.091Z'
+    - phantomjs > request > hawk > sntp > hoek:
+        patched: '2018-07-31T00:36:13.091Z'
+    - phantomjs > request > hawk > cryptiles > boom > hoek:
+        patched: '2018-07-31T00:36:13.091Z'
+    - phantomjs > request > hawk > hoek:
+        patched: '2018-07-31T00:36:13.091Z'
+  'npm:lodash:20180130':
+    - babel-core > babel-plugin-proto-to-assign > lodash:
+        patched: '2018-07-31T00:36:13.091Z'
+    - babel > babel-core > babel-plugin-proto-to-assign > lodash:
+        patched: '2018-07-31T00:36:13.091Z'
+    - babel-loader > babel-core > babel-plugin-proto-to-assign > lodash:
+        patched: '2018-07-31T00:36:13.091Z'
+  'npm:ms:20170412':
+    - karma > socket.io > socket.io-adapter > socket.io-parser > debug > ms:
+        patched: '2018-07-31T00:36:13.091Z'
+  'npm:request:20160119':
+    - phantomjs > request:
+        patched: '2018-07-31T00:36:13.091Z'
+  'npm:tough-cookie:20170905':
+    - phantomjs > request > tough-cookie:
+        patched: '2018-07-31T00:36:13.091Z'
+  'npm:tunnel-agent:20170305':
+    - phantomjs > request > tunnel-agent:
+        patched: '2018-07-31T00:36:13.091Z'
