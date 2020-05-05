@@ -11,7 +11,9 @@
     "preversion": "npm test",
     "version": "npm run build",
     "postversion": "git push && git push --tags",
-    "publish-patch": "npm version patch && npm publish"
+    "publish-patch": "npm version patch && npm publish",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "keywords": [
     "oauth",
@@ -44,5 +46,9 @@
     "wallaby-webpack": "0.0.10",
     "webpack": "^1.12.3",
     "whatwg-fetch": "^0.10.1"
+  },
+  "snyk": true,
+  "dependencies": {
+    "snyk": "^1.317.0"
   }
 }
