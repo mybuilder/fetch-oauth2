@@ -39,8 +39,8 @@
     "karma-phantomjs-launcher": "^0.2.1",
     "karma-spec-reporter": "0.0.22",
     "karma-webpack": "^1.7.0",
-    "mocha": "^2.3.3",
-    "phantomjs": "^1.9.18",
+    "mocha": "^6.2.3",
+    "phantomjs": "^2.1.1",
     "wallaby-webpack": "0.0.10",
     "webpack": "^1.12.3",
     "whatwg-fetch": "^0.10.1"
